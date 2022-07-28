@@ -1,0 +1,473 @@
+/* POPPINS FONT FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-blue: #4516fe;
+  --color-white: #ffffff;
+  --color-grey: #faf9f9;
+  --color-black: #333;
+}
+
+body {
+  background-color: var(--color-grey);
+}
+
+/* CONTAINER */
+nav {
+  height: 70px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* -------------------------------- */
+/* -----------HEADER--------------- */
+/* -------------------------------- */
+header {
+  height: 530px;
+  width: 100%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10vh 10vh 50vh;
+  row-gap: 20px;
+}
+
+/* NAVBAR */
+nav {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 36px;
+}
+
+nav .nav-item,
+.nav-item-active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav .nav-item-active {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+nav .nav-item:last-child {
+  height: 20px;
+  width: 20px;
+}
+
+/* -------------------------------- */
+/* -----------Header--------------- */
+/* -------------------------------- */
+
+/* Header Div's */
+header div {
+  margin-left: 60px;
+}
+
+/* Header Logo */
+header nav + div {
+  grid-column: 1 / 1;
+}
+
+/* Header Text */
+.header-text {
+  grid-column: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+  gap: 24px;
+}
+
+.header-text h2 {
+  font-size: 48px;
+}
+
+.header-text p {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+/* Header Image */
+header div:last-child {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+header div:last-child .header-image {
+  width: 100%;
+  height: 570px;
+  filter: drop-shadow(0 0 1px var(--color-black));
+}
+
+/* Companies Div */
+.companies {
+  margin-left: 60px;
+  height: 100px;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-items {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Righteous", sans-serif;
+  color: var(--color-black);
+}
+
+/* -------------------------------- */
+/* --------- API Section----------- */
+/* -------------------------------- */
+
+.api {
+  margin-left: 60px;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* API Heading */
+.api-heading {
+  font-size: 46px;
+  font-weight: 800;
+}
+
+/* API Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+}
+
+.card-active,
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px;
+  gap: 20px;
+}
+
+.card-active {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
+  border: none;
+}
+
+.card-active .card-logo,
+.card .card-logo {
+  height: 55px;
+}
+.card-active .card-head-active {
+  color: var(--color-blue);
+}
+
+.card-active .card-head,
+.card-active .card-head-active {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards::after {
+  content: ">";
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  font-size: 54px;
+  padding: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* -------- Blog Section ---------- */
+/* -------------------------------- */
+
+.blog-heading,
+.blog-cards {
+  width: 92%;
+  margin: auto;
+}
+
+/* Blog Heading */
+.blog-heading {
+  padding: 24px 0;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* All Articles */
+.blog-heading::after {
+  content: "See All Articles";
+  font-weight: 600;
+  color: #4516fe;
+  cursor: pointer;
+}
+
+/* Blog Cards */
+.blog-cards {
+  padding: 24px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Blog Card 01 */
+.blog-card {
+  display: flex;
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border-top-left-radius: 70px;
+  height: 400px;
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
+}
+
+/* Blog Image */
+.blog-image img {
+  height: 400px;
+}
+
+/* Blog Content */
+.blog-content {
+  width: 230px;
+  padding: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.blog-content h6 {
+  font-size: 16px;
+  color: var(--color-blue);
+}
+
+.blog-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.blog-bottom,
+.blog-author {
+  position: absolute;
+  bottom: 0;
+}
+
+.blog-bottom {
+  right: 200px;
+  bottom: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 70px;
+  width: 70px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.blog-author {
+  width: 100px;
+  bottom: 6px;
+  right: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+.blog-bottom .blog-card-bottom-image {
+  height: 70px;
+}
+
+/* -------------------------------- */
+/* -------- FAQ SECTION  ---------- */
+/* -------------------------------- */
+
+.faq-section {
+  height: 400px;
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9edff;
+}
+
+/* FAQ Content */
+.faq-content {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.faq-content h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.faq-content h4 {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: -15px;
+}
+
+.faq-content h4:nth-child(3) {
+  font-size: 18px;
+}
+
+/* FAQ BUTTON */
+.faq-content button {
+  padding: 10px 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+}
+
+/* FAQ Image */
+.faq-image img {
+  height: 400px;
+}
+
+/* -------------------------------- */
+/* ---------- DOWNLOAD- ----------- */
+/* -------------------------------- */
+
+.download-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px;
+  padding: 100px 0;
+}
+
+/* Download Content */
+.download-content h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.download-content h1 span {
+  font-weight: 300;
+}
+
+/* Download EMail */
+.download-email {
+  margin-right: 60px;
+}
+
+.download-email form {
+  position: relative;
+}
+
+.download-email form input {
+  width: 600px;
+  font-size: 16px;
+  padding: 24px 48px;
+  background-color: #e9edff;
+  color: var(--color-black);
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+}
+
+.download-email form button {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  font-size: 20px;
+  padding: 14px 50px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+/* ----------- FOOTER ------------- */
+/* -------------------------------- */
+.footer-section {
+  height: 300px;
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer Left */
+
+.footer-left {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.footer-left .list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 40px;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.footer-left .list-items {
+  cursor: pointer;
+}
+
+/* Footer Right */
+
+.footer-section div:last-child {
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-section div:last-child > .footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-section div:last-child > .footer-right .footer-logos {
+  height: 50px;
+}
+
+.footer-section div:last-child > .logos-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  color: var(--color-white);
+  gap: 26px;
+}
