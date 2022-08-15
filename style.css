@@ -19,29 +19,22 @@ body {
   background-color: var(--color-grey);
 }
 
-/* CONTAINER */
-nav {
-  height: 70px;
-  width: 90%;
-  margin: 0 auto;
-}
-
 /* -------------------------------- */
 /* -----------HEADER--------------- */
 /* -------------------------------- */
 header {
-  height: 530px;
-  width: 100%;
   background-color: var(--color-blue);
   color: var(--color-white);
   display: grid;
+  flex-direction: column;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10vh 10vh 50vh;
+  grid-template-rows: 1fr 1fr 3fr;
   row-gap: 20px;
 }
 
 /* NAVBAR */
 nav {
+  padding: 44px 48px;
   grid-column: 1 / -1;
   display: flex;
   justify-content: flex-end;
@@ -74,30 +67,24 @@ nav .nav-item:last-child {
 
 /* Header Div's */
 header div {
-  margin-left: 60px;
-}
-
-/* Header Logo */
-header nav + div {
-  grid-column: 1 / 1;
+  padding-left: 60px;
 }
 
 /* Header Text */
 .header-text {
-  grid-column: 1 / 1;
+  grid-row: 3 / 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 30px;
   gap: 24px;
 }
 
 .header-text h2 {
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .header-text p {
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.8;
 }
 
@@ -109,13 +96,12 @@ header div:last-child {
 
 header div:last-child .header-image {
   width: 100%;
-  height: 570px;
   filter: drop-shadow(0 0 1px var(--color-black));
 }
 
 /* Companies Div */
 .companies {
-  margin-left: 60px;
+  padding-left: 60px;
   height: 100px;
   width: 45%;
   display: flex;
@@ -136,8 +122,7 @@ header div:last-child .header-image {
 /* -------------------------------- */
 
 .api {
-  margin-left: 60px;
-  padding: 70px 0;
+  padding: 70px 64px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -150,9 +135,10 @@ header div:last-child .header-image {
 }
 
 /* API Cards */
-.cards {
+.api .cards {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr 2fr 1fr;
+  gap: 20px;
 }
 
 .card-active,
@@ -191,6 +177,7 @@ header div:last-child .header-image {
   align-self: center;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
   height: 20px;
   width: 20px;
   font-size: 54px;
@@ -205,20 +192,17 @@ header div:last-child .header-image {
 /* -------- Blog Section ---------- */
 /* -------------------------------- */
 
-.blog-heading,
-.blog-cards {
-  width: 92%;
-  margin: auto;
-}
-
 /* Blog Heading */
 .blog-heading {
-  padding: 24px 0;
-  font-size: 24px;
+  padding: 24px 64px;
   font-weight: 600;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.blog-heading h1 {
+  font-size: 46px;
 }
 
 /* All Articles */
@@ -231,33 +215,36 @@ header div:last-child .header-image {
 
 /* Blog Cards */
 .blog-cards {
-  padding: 24px;
+  padding: 24px 64px;
   margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  gap: 36px;
 }
 
 /* Blog Card 01 */
 .blog-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   position: relative;
   background-color: var(--color-white);
   border-radius: 20px;
   border-top-left-radius: 70px;
-  height: 400px;
   box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
 }
 
 /* Blog Image */
+
 .blog-image img {
-  height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 /* Blog Content */
 .blog-content {
-  width: 230px;
-  padding: 46px;
+  padding: 46px 0;
   display: flex;
   flex-direction: column;
   gap: 26px;
@@ -310,7 +297,6 @@ header div:last-child .header-image {
 /* -------------------------------- */
 
 .faq-section {
-  height: 400px;
   margin: 48px 0;
   display: flex;
   justify-content: space-between;
@@ -319,7 +305,8 @@ header div:last-child .header-image {
 
 /* FAQ Content */
 .faq-content {
-  margin-left: 60px;
+  padding: 24px 0;
+  padding-left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -354,7 +341,8 @@ header div:last-child .header-image {
 
 /* FAQ Image */
 .faq-image img {
-  height: 400px;
+  height: 100%;
+  width: 100%;
 }
 
 /* -------------------------------- */
@@ -362,14 +350,14 @@ header div:last-child .header-image {
 /* -------------------------------- */
 
 .download-section {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  margin: 0 60px;
-  padding: 100px 0;
+  padding: 64px;
 }
 
 /* Download Content */
+
 .download-content h1 {
   font-size: 36px;
   font-weight: 600;
@@ -380,18 +368,21 @@ header div:last-child .header-image {
 }
 
 /* Download EMail */
+
 .download-email {
-  margin-right: 60px;
+  padding: 36px;
 }
 
 .download-email form {
   position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .download-email form input {
-  width: 600px;
+  width: 90%;
   font-size: 16px;
-  padding: 24px 48px;
+  padding: 24px;
   background-color: #e9edff;
   color: var(--color-black);
   font-weight: 600;
@@ -401,7 +392,7 @@ header div:last-child .header-image {
 
 .download-email form button {
   position: absolute;
-  right: 10px;
+  right: 5%;
   top: 7px;
   font-size: 20px;
   padding: 14px 50px;
@@ -416,7 +407,7 @@ header div:last-child .header-image {
 /* ----------- FOOTER ------------- */
 /* -------------------------------- */
 .footer-section {
-  height: 300px;
+  padding: 46px;
   background-color: var(--color-blue);
   display: flex;
   justify-content: space-between;
@@ -426,7 +417,6 @@ header div:last-child .header-image {
 /* Footer Left */
 
 .footer-left {
-  margin-left: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -449,7 +439,6 @@ header div:last-child .header-image {
 /* Footer Right */
 
 .footer-section div:last-child {
-  margin-right: 120px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -470,4 +459,299 @@ header div:last-child .header-image {
   align-items: center;
   color: var(--color-white);
   gap: 26px;
+}
+
+/* --------------- MEIDA QUERIES --------------------- */
+
+@media screen and (min-width: 1049px) {
+  header {
+    height: 530px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  nav {
+    justify-content: center;
+  }
+
+  header div,
+  .companies {
+    padding-left: 24px;
+  }
+
+  .api {
+    padding: 60px 24px;
+  }
+
+  .api .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-active,
+  .card {
+    align-items: center;
+  }
+
+  .blog-heading,
+  .blog-cards {
+    padding: 24px 36px;
+  }
+
+  .blog-card {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .blog-image {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .blog-content {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 68px 0;
+  }
+}
+
+@media screen and (max-width: 1049px) {
+  .header-text h2 {
+    font-size: 28px;
+  }
+
+  header div:last-child .header-image {
+    width: 500px;
+    filter: drop-shadow(0 0 1px var(--color-black));
+  }
+
+  .companies {
+    padding: 0 34px;
+    width: 89%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 46px 0;
+  }
+
+  nav {
+    padding: 24px 48px;
+  }
+
+  .header-text {
+    align-items: center;
+    padding: 0;
+  }
+
+  header div:last-child {
+    display: none;
+  }
+
+  .api-heading {
+    font-size: 36px;
+  }
+
+  .api .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-heading h1 {
+    font-size: 36px;
+  }
+
+  .faq-section {
+    justify-content: center;
+  }
+
+  .faq-content {
+    padding: 24px 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq-image {
+    display: none;
+  }
+
+  .download-section {
+    grid-template-columns: 1fr;
+  }
+
+  .download-content {
+    text-align: center;
+  }
+
+  .footer-left .list {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer-section div:last-child {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    padding: 0 0 46px 0;
+  }
+
+  nav {
+    padding: 24px 0;
+  }
+
+  .companies {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .company-items {
+    font-size: 20px;
+  }
+
+  .api-heading {
+    font-size: 30px;
+  }
+
+  .blog-heading h1 {
+    font-size: 30px;
+  }
+
+  .blog-cards {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .blog-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .download-section {
+    padding: 12px;
+  }
+
+  .footer-section div:last-child {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-item {
+    display: none;
+  }
+
+  nav .nav-item:nth-child(5),
+  nav .nav-item:last-child {
+    display: block;
+  }
+
+  .api .cards {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+
+  .blog-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .blog-card {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .blog-image {
+    height: 80%;
+    width: 80%;
+  }
+
+  .faq-content {
+    padding: 24px;
+  }
+
+  .faq-content h2 {
+    font-size: 36px;
+  }
+
+  .faq-content h4 {
+    font-size: 12px;
+  }
+
+  .faq-content h4:nth-child(3) {
+    font-size: 14px;
+  }
+
+  .download-section {
+    padding: 0;
+  }
+
+  .download-content h1 {
+    font-size: 28px;
+  }
+
+  .download-email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+  }
+
+  .download-email form input {
+    width: 80%;
+    padding: 24px 36px;
+    text-align: center;
+  }
+
+  .download-email form button {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 18px 60px 18px;
+  }
+
+  .header-text h2 {
+    font-size: 20px;
+  }
+
+  .header-text p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .companies .company-items {
+    font-size: 14px;
+  }
+
+  .footer-section {
+    padding: 30px 18px;
+    flex-direction: column;
+  }
+
+  .footer-left {
+    display: none;
+  }
 }
